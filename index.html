@@ -26,7 +26,8 @@
 body{background:#fff;color:#000;font-family:"lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","MicrosoftYaHei","WenQuanYi Micro Hei",sans-serif}
 a{text-decoration:none;color:#0000ff}
 a:hover{text-decoration:underline}
-img{max-width:80%}
+img{max-width:84%;border:1px dashed #d0d0d0;border-radius:10px}
+.bb{margin-bottom:5px}
 .header_title{font-weight:bold;font-size:large;color:#e78f1d;margin:0;padding:0}
 .ft{text-align:center}
 .nw{color:#ff0000}
@@ -35,7 +36,7 @@ ul{padding:0;margin:0}
 	p{margin:4px}
 }
 #main{margin:10px auto 0;display:flex;justify-content:center;flex-direction:column;align-items:center}
-.field{width:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;color:#6C757D;font-size:16px;padding:15px;margin:5px auto;border:1px solid #63B8FF;border-radius:10px}
+.field{width:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;color:#6C757D;font-size:16px;padding:15px;margin:5px auto;border:1px dashed #63B8FF;border-radius:10px}
 .field.desc ul > li{text-align:left;font-size:14px}
 @media (max-width: 500px){
 	#main {padding:0 5px}
@@ -69,16 +70,18 @@ ul > li.text{font-size:12px;clear:both;width:100%}
 	
 	<div class="field">
 		<div class="ft"><a id="tiaozhuan1" href="javascript:void(0);" target="_blank"><img id="logo1" /></a></div>
+		<div class="bb" id="web1"></div>
 		<div class="ft"><a id="tiaozhuan2" href="javascript:void(0);" target="_blank"><img id="logo2" /></a></div>
-		<p class="nw">点击上面图片进入网站，如果网站打不开或打开缓慢，请更换电信或联通网络再访问，移动线路不稳且屏蔽频繁～</p>
+		<div id="web2"></div>
+		<p class="nw">如果网站打不开或打开缓慢，请更换电信或联通网络再访问，移动线路不稳且屏蔽频繁～</p>
 	</div>
 	
 	<div class="field desc">
 		<h4 class="title">✐ 温馨提示</h4>
 		<ul>
-			<li>* 由于网站易遭封锁，因此域名不稳定，而本发布页永久可用，请务必将本页加入收藏，避免迷路！</li>
-			<li>* 当你发现本站地址不能正常访问时，打开此发布页即可获取最新可用地址！</li>
-			<li>* 建议每次浏览本站都先打开此发布页，再由发布页进入，以确保每次都能正常浏览！</li>
+			<li>* 网站域名易遭屏蔽，而发布页永久可用，请务必将本发布页网址加入收藏，避免迷路！</li>
+			<li>* 当你发现网站域名不能正常访问时，打开此发布页即可获取最新可用地址！</li>
+			<li>* 建议每次浏览网站都先打开此发布页，再由发布页进入，以确保每次都能正常浏览！</li>
 			<p class="c_black">1、安卓手机用户点击<span class="icon icon_android_share"></span>，或者打开设置，然后添加到书签或者添加到主屏幕；</p>
 			<p class="c_black">2、苹果手机用户在浏览器点击<span class="icon icon_ios_share"></span>，然后添加到个人收藏或者添加到主屏幕；</p>
 			<p class="c_black">3、使用PC或笔记本电脑浏览的用户，请同时按键盘上的CTRL+D进行收藏。</p>
@@ -92,9 +95,11 @@ ul > li.text{font-size:12px;clear:both;width:100%}
 		document.getElementById("tiaozhuan1").href = LockDomain1;
 		document.getElementById("tiaozhuan1").title = "点击进入：" + LockName1;
 		document.getElementById("logo1").src = LockLogo1;
+		document.getElementById("web1").innerHTML = "👆 点击上图进入：" + LockName1 + " ☝";
 		document.getElementById("tiaozhuan2").href = LockDomain2;
 		document.getElementById("tiaozhuan2").title = "点击进入：" + LockName2;
 		document.getElementById("logo2").src = LockLogo2;
+		document.getElementById("web2").innerHTML = "👆 点击上图进入：" + LockName2 + " ☝";
 	</script>
 </div>
 
